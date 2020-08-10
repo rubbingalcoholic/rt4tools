@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <title>rt4tools</title>
+    </head>
+    <style type="text/css">
+    </style>
+    <body>
+        <h1>rt4tools</h1>
+        <h2>Take action and contact your city council member RIGHT NOW</h2>
+        <p>
+            Enter your address to find your city council member:
+            <form id="submitForm" enctype="multipart/form-data">
+                <input type="text" id="address" name="address" placeholder="Street address"/>
+                <button type="submit">submit</button>
+            </form>
+        </p>
+        <p>
+            You can also use the
+            <a href="http://apps.ci.minneapolis.mn.us/AddressPortalApp/Search?AppID=WardFinderApp" target="_blank">official Minneapolis Ward Finder tool</a>
+            if you don't want to enter your address here.
+        </p>
+        <hr/>
+        <div id="resultsDiv"></div>
+    </body>
+    <script>
+        const wardData = {
+            ward1: {
+                name: 'Kevin Reich',
+                image: 'ward1.jpg',
+                phone: '(612) 673-2201',
+                email: 'kevin.reich@minneapolismn.gov'
+            },
+            ward2: {
+                name: 'Cam Gordon',
+                image: 'ward2.jpg',
+                phone: '(612) 673-2202',
+                email: 'cam.gordon@minneapolismn.gov'
+            },
+            ward3: {
+                name: 'Steve Fletcher',
+                image: 'ward3.jpg',
+                phone: '(612) 673-2203',
+                email: 'steve.fletcher@minneapolismn.gov'
+            },
+            ward4: {
+                name: 'Phillipe Cunningham',
+                image: 'ward4.png',
+                phone: '(612) 673-2204',
+                email: 'phillipe.cunningham@minneapolismn.gov'
+            },
+            ward5: {
+                name: 'Jeremiah Ellison',
+                image: 'ward5.png',
+                phone: '(612) 673-2205',
+                email: 'jeremiah.ellison@minneapolismn.gov'
+            },
+            ward6: {
+                name: 'VACANT SEAT',
+                image: 'ward6.png',
+                phone: '(612) 673-2206',
+                email: 'jacob.frey@minneapolismn.gov'
+            },
+            ward7: {
+                name: 'Lisa Goodman',
+                image: 'ward7.jpg',
+                phone: '(612) 673-2207',
+                email: 'lisa.goodman@minneapolismn.gov'
+            },
+            ward8: {
+                name: 'Andrea Jenkins',
+                image: 'ward8.png',
+                phone: '(612) 673-2208',
+                email: 'andrea.jenkins@minneapolismn.gov'
+            },
+            ward9: {
+                name: 'Alondra Cano',
+                image: 'ward9.jpg',
+                phone: '(612) 673-2209',
+                email: 'alondra.cano@minneapolismn.gov'
+            },
+            ward10: {
+                name: 'Lisa Bender',
+                image: 'ward10.png',
+                phone: '(612) 673-2210',
+                email: 'lisa.bender@minneapolismn.gov'
+            },
+            ward11: {
+                name: 'Jeremy Schroeder',
+                image: 'ward11.png',
+                phone: '(612) 673-2211',
+                email: 'jeremy.schroeder@minneapolismn.gov'
+            },
+            ward12: {
+                name: 'Andrew Johnson',
+                image: 'ward12.png',
+                phone: '(612) 673-2212',
+                email: 'andrew.johnson@minneapolismn.gov'
+            },
+            ward13: {
+                name: 'Linea Palmisano',
+                image: 'ward13.jpg',
+                phone: '(612) 673-2213',
+                email: 'linea.palmisano@minneapolismn.gov'
+            },
+        };
+
+        const submitForm = document.getElementById('submitForm'),
+            resultsDiv = document.getElementById('resultsDiv');
+
+        const doSubmit = e => {
+            if (e) e.preventDefault();
+
+            const xhr = new XMLHttpRequest(),
+                data = new FormData(submitForm);
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    switch (xhr.status) {
+                        case 200:
+                            console.log('success: ', xhr.response);
+                            showWardInfo(xhr.response);
+                            break;
+                        default:
+                            console.error('ERROR: ', xhr.response);
+                            resultsDiv.innerHTML = '<h3>An error occurred. Please check the console and try again.</h3>';
+                            break;
+                    }
+                }
+            }.bind(this);
+            xhr.open("post", '/formstuffer/minneapolis/ward', true);
+            xhr.send(data);
+            resultsDiv.innerHTML = '<h3>loading...</h3>';
+        }
+
+        const showWardInfo = ward => {
+            // shorthand
+            resultsDiv.innerHTML = `
+                <h3>Minneapolis ${ward} info:</h3>
+                <table>
+                    <tr>
+                        <th>Name:</th>
+                        <td>${wardData[ward].name}</td>
+                    </tr>
+                    <tr>
+                        <th>Email:</th>
+                        <td><a href="mailto:${wardData[ward].email}">${wardData[ward].email}</a></td>
+                    </tr>
+                    <tr>
+                        <th>Phone:</th>
+                        <td><a href="tel:${wardData[ward].phone}">${wardData[ward].phone}</a></td>
+                    </tr>
+                </table>
+                <img src="/images/wards/${wardData[ward].image}"/>
+            `;
+
+        };
+
+        submitForm.addEventListener('submit', doSubmit);
+    </script>
+</html>
