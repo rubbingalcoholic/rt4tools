@@ -57,11 +57,11 @@ app.post('/formstuffer/minneapolis/ward', upload.none(), async (req, res, next) 
     const response4 = await got(domain + redirect, { headers, followRedirect: false });
 
     // GOT IT!
-    location = /\/(ward\d+)\//.exec(response4.headers.location)[1];    
+    const ward = /\/(ward\d+)\//.exec(response4.headers.location)[1];    
 
-    console.log('location: ', location);
+    console.log('ward: ', ward);
 
-    res.send(location);
+    res.send(ward);
 
   } catch(error) {
     console.error('ERROR: ', error);
