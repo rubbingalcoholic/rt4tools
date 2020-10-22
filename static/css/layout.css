@@ -1,0 +1,346 @@
+body {
+    overflow-y: scroll;
+    background-color: #289199;
+    line-height: 1.6;
+}
+
+a {
+    color: #208de5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    color: #020202;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.site-header {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 15px 0;
+    padding: 0.9375rem 0;
+    position: relative;
+    transition: all .25s ease-out;
+    margin: 0 0 15px;
+    margin: 0 0 0.9375rem;
+
+    text-align: center;
+}
+
+.custom-logo {
+    width: auto;
+    max-height: 100px;
+    margin: 0;
+    padding: 0;
+    transition: all .25s ease-out;
+}
+
+.entry-title {
+    clear: none;
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    text-align: center;
+    margin-bottom: 26px;
+    margin-bottom: 1.625rem;
+}
+
+.entry-title em {
+    font-size: 120%;
+    font-weight: 700;
+}
+
+article {
+    max-width: 864px;
+    width: 100%;
+    background: white;
+    margin: 0px auto;
+    padding: 15px;
+    padding: 0.9375rem;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 16px;
+    font-size: 1rem;
+    margin-bottom: 26px;
+    margin-bottom: 1.625rem;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+h3 {
+    background: #289199;
+    color: white;
+    text-align: center;
+    height: 60px;
+    margin-bottom: 26px;
+    margin-bottom: 1.625rem;
+    font-size: 24px;
+    line-height: 60px;
+}
+
+hr {
+    border-top: 0px none transparent;
+    border-left: 0px none transparent;
+    border-right: 0px none transparent;
+    border-bottom: 2px solid #bbb;
+    margin: 1.625rem auto 1.625rem auto;
+    max-width: 250px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.call-to-action {
+    padding: 25px 15px;
+    background: #ffffbb;
+    border: 1px solid #dddd88;
+    margin-bottom: 26px;
+    margin-bottom: 1.625rem;
+}
+
+.call-to-action h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 110%;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.call-to-action strong {
+    font-weight: 600;
+}
+
+.call-to-action p {
+    margin-bottom: 15px;
+}
+.call-to-action p.disclosure {
+    margin: 15px auto 0 auto;
+    font-size: 95%;
+    max-width: 500px;
+    opacity: .8;
+}
+.call-to-action p.disclosure.error {
+    font-weight: 600;
+    color: #800;
+    opacity: 1;
+}
+
+.call-to-action form {
+    text-align: center;
+}
+
+.call-to-action form input {
+    height: 60px;
+    line-height: 60px;
+    padding: 0px 10px;
+    font-size: 120%;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    background: white;
+    font-family: 'Rubik', sans-serif;
+    min-width: 250px;
+}
+.call-to-action form input:disabled {
+    color: #888;
+    background: #eee;
+}
+
+.call-to-action form button {
+    background: #55aa44;
+    cursor: pointer;
+    border: 2px solid #55aa44;
+    padding: 0px 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-top: 10px;
+    min-height: 40px;
+    color: white;
+}
+.call-to-action form button:hover {
+    border: 2px solid #449933;
+    background: #449933;
+}
+
+.call-to-action form button:disabled {
+    background: #bbb;
+    border: 2px solid #bbb;
+}
+
+.call-to-action .whois {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-table {
+    font-family: 'Rubik', sans-serif;
+}
+
+.info-table th {
+    font-weight: 600;
+    text-align: left;
+    padding-right: 10px;
+}
+
+.info-table img.headshot {
+    display: block;
+    margin: 15px auto 0px auto;
+}
+
+.coalition {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.coalition a {
+    display: block;
+    text-align: center;
+    margin: 0px 16px 25px 16px;
+}
+.coalition img {
+    width: auto;
+    max-height: 115px;
+}
+
+footer {
+    margin: 30px 0 0 0;
+    background: black;
+    padding: 0px 30px;
+    color: #999;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    padding: 0.9375rem 0;
+    font-size: 0.875rem;
+}
+footer a {
+    color: #999;
+    text-decoration: none;
+}
+footer a:hover {
+    color: white;
+}
+
+@media (min-width: 768px) {
+    body {
+        line-height: 1.8;
+    }
+
+    .site-header {
+        padding: 30px 0;
+        padding: 1.875rem 0;
+        margin: 0 0 30px;
+        margin: 0 0 1.875rem;
+    }
+
+    .custom-logo {
+        max-height: 150px;
+    }
+
+    .entry-title {
+        font-size: 38px;
+        font-size: 2.375rem;
+        margin-bottom: 32px;
+        margin-bottom: 2rem;
+    }
+
+    article {
+        padding: 30px;
+        padding: 1.875rem;
+    }
+
+    p {
+        font-size: 18px;
+        font-size: 1.125rem;
+        margin-bottom: 32px;
+        margin-bottom: 2rem;
+    }
+
+    h3 {
+        margin-bottom: 32px;
+        margin-bottom: 2rem;
+    }
+
+    .call-to-action {
+        margin-bottom: 32px;
+        margin-bottom: 2rem;
+    }
+
+    hr {
+        margin: 2rem auto 2rem auto;
+    }
+
+    .call-to-action form {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: 500px;
+        margin: 0px auto;
+    }
+
+    .call-to-action form input {
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+
+    .call-to-action form button {
+        margin: 0px 0px 0px 10px;
+    }
+
+    .info-table {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .info-table table {
+        
+    }
+
+    .info-table img.headshot {
+        margin: 0px 15px 0px 0px;
+        width: auto;
+        max-height: 100px;
+    }
+
+    .info-table table td {
+        width: 100%;
+    }
+
+    footer {
+        padding: 2.8125rem 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .site-header {
+        padding: 20px 0;
+        padding: 1.25rem 0;
+    }
+
+    .custom-logo {
+        max-height: 200px;
+    }
+
+    article {
+        padding: 45px;
+        padding: 2.8125rem;
+    }
+
+    footer {
+        padding: 2.8125rem 0;
+    }
+}

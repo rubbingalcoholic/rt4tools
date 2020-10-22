@@ -1,26 +1,64 @@
 <html>
     <head>
-        <title>rt4tools</title>
+        <title>Take action to ban facial recognition in Minneapolis - POSTME</title>
     </head>
-    <style type="text/css">
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/layout.css">
     <body>
-        <h1>rt4tools</h1>
-        <h2>Take action and contact your city council member RIGHT NOW</h2>
-        <p>
-            Enter your address to find your city council member:
-            <form id="submitForm" enctype="multipart/form-data">
-                <input type="text" id="address" name="address" placeholder="Street address"/>
-                <button type="submit">submit</button>
-            </form>
-        </p>
-        <p>
-            You can also use the
-            <a href="http://apps.ci.minneapolis.mn.us/AddressPortalApp/Search?AppID=WardFinderApp" target="_blank">official Minneapolis Ward Finder tool</a>
-            if you don't want to enter your address here.
-        </p>
-        <hr/>
-        <div id="resultsDiv"></div>
+        <header class="site-header">
+            <a href="https://postme.mn/" class="custom-logo-link" rel="home">
+                <img width="903" height="577" src="/images/logo.png" class="custom-logo" alt="POST ME">
+            </a>
+        </header>
+        <article>
+            <section>
+                <h1 class="entry-title">
+                    Tell the Minneapolis City Council &mdash; <em>BAN FACIAL RECOGNITION</em>
+                </h1>
+                <p>
+                    Police are increasingly using surveillance technology and military equipment to
+                    further entrench racial bias into the criminal justice system, invade peoples' privacy,
+                    and wrongfully arrest innocent people. Now, Minneapolis has a chance to reign this
+                    in with a new measure called <strong>POSTME: <a href="https://postme.mn">Public Oversight of Surveillance
+                    Technology and Military Equipment.</a></strong>
+                </p>
+                <div class="call-to-action">
+                    <h2>Tell your City Council member &mdash; pass POSTME today!</h2>
+                    <div class="form-container" id="formContainer">
+                        <p>Enter your street address to look up your Minneapolis City Council member.</p>
+                        <form id="submitForm" enctype="multipart/form-data">
+                            <input type="text" placeholder="Enter your street address" id="addressField" name="address">
+                            <button type="submit" id="submitButton">Find my City Councilor</button>
+                        </form>
+                        <p class="disclosure" id="disclosure">We only use your address to find your City Council member. We do not store your address or use it to contact you. If you prefer, use the <a href="http://apps.ci.minneapolis.mn.us/AddressPortalApp/Search?AppID=WardFinderApp" target="_blank"><strong>Official City of Minneapolis Ward Lookup.</strong></a></p>
+                    </div>
+                    <div id="resultsDiv"></div>
+                </div>
+                <hr>
+                <h3>What is POSTME?</h3>
+                <p class="has-text-align-center">
+                    POSTME is a proposed Minneapolis law created within the ACLU’s nationwide <a href="https://www.aclu.org/issues/privacy-technology/surveillance-technologies/community-control-over-police-surveillance">Community Control Over Police Surveillance (CCOPS)</a> effort. The CCOPS <a href="https://www.aclu.org/sites/default/files/field_document/aclu_ccopsm_model_bill_october_2018.pdf">model bill</a> has been successfully adopted in <a href="https://docs.google.com/document/d/13iDnd60EGKZOG16j1y1NfFhdwzVFxQB9rHgovgPX2Ac/edit">13 major American cities and counting</a>. With POSTME, Minneapolis could be the next city to join the movement.
+                    POSTME is endorsed by a coalition of local and national civil rights advocacy organizations.
+                    <strong><a href="https://postme.mn">Learn more about POSTME</a></strong>
+                </p>
+                <div class="coalition">
+                    <a href="/"><img src="/images/coalition/aclu.svg"/></a>
+                    <a href="/"><img src="/images/coalition/cairmn.png"/></a>
+                    <a href="/"><img src="/images/coalition/cuapb.png"/></a>
+                    <a href="/"><img src="/images/coalition/jewish-community-action.png"/></a>
+                    <a href="/"><img src="/images/coalition/rt4.png"/></a>
+                    <a href="/"><img src="/images/coalition/stanfordpacs.svg"/></a>
+                </div>
+            </section>
+        </article>
+        <footer>
+            Hosting provided by <a href="https://capsul.org/" target="_blank">Capsul.org</a>
+            <br>
+            <a href="https://postme.mn/wp-login.php">Login</a>
+        </footer>
     </body>
     <script>
         const wardData = {
@@ -28,84 +66,101 @@
                 name: 'Kevin Reich',
                 image: 'ward1.jpg',
                 phone: '(612) 673-2201',
-                email: 'kevin.reich@minneapolismn.gov'
+                email: 'kevin.reich@minneapolismn.gov',
+                twitter: 'mpls_kevin'
             },
             ward2: {
                 name: 'Cam Gordon',
                 image: 'ward2.jpg',
                 phone: '(612) 673-2202',
-                email: 'cam.gordon@minneapolismn.gov'
+                email: 'cam.gordon@minneapolismn.gov',
+                twitter: 'CameronAGordon'
             },
             ward3: {
                 name: 'Steve Fletcher',
                 image: 'ward3.jpg',
                 phone: '(612) 673-2203',
-                email: 'steve.fletcher@minneapolismn.gov'
+                email: 'steve.fletcher@minneapolismn.gov',
+                twitter: 'fletchermpls'
             },
             ward4: {
                 name: 'Phillipe Cunningham',
                 image: 'ward4.png',
                 phone: '(612) 673-2204',
-                email: 'phillipe.cunningham@minneapolismn.gov'
+                email: 'phillipe.cunningham@minneapolismn.gov',
+                twitter: 'cunninghammpls'
             },
             ward5: {
                 name: 'Jeremiah Ellison',
                 image: 'ward5.png',
                 phone: '(612) 673-2205',
-                email: 'jeremiah.ellison@minneapolismn.gov'
+                email: 'jeremiah.ellison@minneapolismn.gov',
+                twitter: 'jeremiah4north'
             },
             ward6: {
                 name: 'VACANT SEAT',
                 image: 'ward6.png',
                 phone: '(612) 673-2206',
-                email: 'jacob.frey@minneapolismn.gov'
+                email: 'jacob.frey@minneapolismn.gov',
+                twitter: 'mayorfrey'
             },
             ward7: {
                 name: 'Lisa Goodman',
                 image: 'ward7.jpg',
                 phone: '(612) 673-2207',
-                email: 'lisa.goodman@minneapolismn.gov'
+                email: 'lisa.goodman@minneapolismn.gov',
+                twitter: 'cmlisagoodman'
             },
             ward8: {
                 name: 'Andrea Jenkins',
                 image: 'ward8.png',
                 phone: '(612) 673-2208',
-                email: 'andrea.jenkins@minneapolismn.gov'
+                email: 'andrea.jenkins@minneapolismn.gov',
+                twitter: 'andreaforward8'
             },
             ward9: {
                 name: 'Alondra Cano',
                 image: 'ward9.jpg',
                 phone: '(612) 673-2209',
-                email: 'alondra.cano@minneapolismn.gov'
+                email: 'alondra.cano@minneapolismn.gov',
+                twitter: 'alocanomn'
             },
             ward10: {
                 name: 'Lisa Bender',
                 image: 'ward10.png',
                 phone: '(612) 673-2210',
-                email: 'lisa.bender@minneapolismn.gov'
+                email: 'lisa.bender@minneapolismn.gov',
+                twitter: 'lisabendermpls'
             },
             ward11: {
                 name: 'Jeremy Schroeder',
                 image: 'ward11.png',
                 phone: '(612) 673-2211',
-                email: 'jeremy.schroeder@minneapolismn.gov'
+                email: 'jeremy.schroeder@minneapolismn.gov',
+                twitter: 'jeremyschroeder'
             },
             ward12: {
                 name: 'Andrew Johnson',
                 image: 'ward12.png',
                 phone: '(612) 673-2212',
-                email: 'andrew.johnson@minneapolismn.gov'
+                email: 'andrew.johnson@minneapolismn.gov',
+                twitter: 'cmandrewjohnson'
             },
             ward13: {
                 name: 'Linea Palmisano',
                 image: 'ward13.jpg',
                 phone: '(612) 673-2213',
-                email: 'linea.palmisano@minneapolismn.gov'
+                email: 'linea.palmisano@minneapolismn.gov',
+                twitter: 'lineapalmisano'
             },
         };
 
         const submitForm = document.getElementById('submitForm'),
-            resultsDiv = document.getElementById('resultsDiv');
+            resultsDiv = document.getElementById('resultsDiv'),
+            submitButton = document.getElementById('submitButton'),
+            addressField = document.getElementById('addressField'),
+            disclosure = document.getElementById('disclosure'),
+            formContainer = document.getElementById('formContainer');
 
         const doSubmit = e => {
             if (e) e.preventDefault();
@@ -113,44 +168,53 @@
             const xhr = new XMLHttpRequest(),
                 data = new FormData(submitForm);
 
+            submitButton.disabled = true;
+            addressField.disabled = true;
+
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4) {
+                    submitButton.disabled = false;
+                    addressField.disabled = false;
+
                     switch (xhr.status) {
                         case 200:
                             console.log('success: ', xhr.response);
+                            formContainer.style.display = 'none';
                             showWardInfo(xhr.response);
                             break;
                         default:
                             console.error('ERROR: ', xhr.response);
-                            resultsDiv.innerHTML = '<h3>An error occurred. Please check the console and try again.</h3>';
+                            disclosure.classList.add('error');
+                            disclosure.innerHTML = 'We could not find a Minneapolis City Council Ward for your address. Please try again, or use the <a href="http://apps.ci.minneapolis.mn.us/AddressPortalApp/Search?AppID=WardFinderApp" target="_blank">Official Minneapolis Ward Lookup.</a>';
                             break;
                     }
                 }
             }.bind(this);
             xhr.open("post", '/formstuffer/minneapolis/ward', true);
             xhr.send(data);
-            resultsDiv.innerHTML = '<h3>loading...</h3>';
         }
 
         const showWardInfo = ward => {
             // shorthand
             resultsDiv.innerHTML = `
-                <h3>Minneapolis ${ward} info:</h3>
-                <table>
-                    <tr>
-                        <th>Name:</th>
-                        <td>${wardData[ward].name}</td>
-                    </tr>
-                    <tr>
-                        <th>Email:</th>
-                        <td><a href="mailto:${wardData[ward].email}">${wardData[ward].email}</a></td>
-                    </tr>
-                    <tr>
-                        <th>Phone:</th>
-                        <td><a href="tel:${wardData[ward].phone}">${wardData[ward].phone}</a></td>
-                    </tr>
-                </table>
-                <img src="/images/wards/${wardData[ward].image}"/>
+                <p class="whois">Your City Council member is <a href="http://www2.minneapolismn.gov/${ward}/index.htm" target="_blank"><strong>${wardData[ward].name} of Ward ${ward.replace('ward', '')}.</strong></a> Please reach out and ask them to support POSTME!</p>
+                <div class="info-table">
+                     <table>
+                        <tr>
+                            <th>Twitter:</th>
+                            <td><a href="https://twitter.com/${wardData[ward].twitter}" target="_blank">@${wardData[ward].twitter}</a></td>
+                        </tr>
+                        <tr>
+                            <th>Email:</th>
+                            <td><a href="mailto:${wardData[ward].email}">${wardData[ward].email}</a></td>
+                        </tr>
+                        <tr>
+                            <th>Phone:</th>
+                            <td><a href="tel:${wardData[ward].phone}">${wardData[ward].phone}</a></td>
+                        </tr>
+                    </table>
+                    <img class="headshot" src="/images/wards/${wardData[ward].image}"/>
+                </div>
             `;
 
         };
