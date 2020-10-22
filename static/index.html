@@ -1,16 +1,35 @@
 <html>
     <head>
         <title>Take action to ban facial recognition in Minneapolis - POSTME</title>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="/css/layout.css">
+        <link rel="icon" href="/images/favicon.png">
+
+        <!-- Facebook Sharing Preview Meta Tags -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://action.postme.mn" />
+        <meta property="og:image" content="https://actions.postme.mn/images/social/share_graphic.png" />
+        <meta property="og:title" content="Tell the Minneapolis City Council — Ban Facial Recognition" />
+        <meta property="og:description" content="Minneapolis is considering legislation that would restrict the use of invasive surveillance technologies and police militarization. Contact your City Council member today!" />
+        <meta property="og:site_name" content="POSTME.mn" />
+
+        <!-- Twitter Sharing Preview Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@rt4mn" />
+        <meta name="twitter:title" content="Tell the Minneapolis City Council — Ban Facial Recognition" />
+        <meta name="twitter:description" content="Minneapolis is considering legislation that would restrict the use of invasive surveillance technologies and police militarization. Contact your City Council member today!" />
+        <meta name="twitter:image" content="https://actions.postme.mn/images/social/share_graphic.png" />
+        <meta name="twitter:url" content="https://action.postme.mn" />
+
     </head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="/css/layout.css">
     <body>
         <header class="site-header">
             <a href="https://postme.mn/" class="custom-logo-link" rel="home">
-                <img width="903" height="577" src="/images/logo.png" class="custom-logo" alt="POST ME">
+                <img src="/images/logo.png" class="custom-logo" alt="POST ME">
             </a>
         </header>
         <article>
@@ -42,19 +61,23 @@
                 <p class="has-text-align-center">
                     POSTME is a proposed Minneapolis law created within the ACLU’s nationwide <a href="https://www.aclu.org/issues/privacy-technology/surveillance-technologies/community-control-over-police-surveillance">Community Control Over Police Surveillance (CCOPS)</a> effort. The CCOPS <a href="https://www.aclu.org/sites/default/files/field_document/aclu_ccopsm_model_bill_october_2018.pdf">model bill</a> has been successfully adopted in <a href="https://docs.google.com/document/d/13iDnd60EGKZOG16j1y1NfFhdwzVFxQB9rHgovgPX2Ac/edit">13 major American cities and counting</a>. With POSTME, Minneapolis could be the next city to join the movement.
                     POSTME is endorsed by a coalition of local and national civil rights advocacy organizations.
-                    <strong><a href="https://postme.mn">Learn more about POSTME</a></strong>
+                </p>
+                <p>
+                    <strong><a href="https://postme.mn">Click here to learn more about POSTME...</a></strong>
                 </p>
                 <div class="coalition">
-                    <a href="/"><img src="/images/coalition/aclu.svg"/></a>
-                    <a href="/"><img src="/images/coalition/cairmn.png"/></a>
-                    <a href="/"><img src="/images/coalition/cuapb.png"/></a>
-                    <a href="/"><img src="/images/coalition/jewish-community-action.png"/></a>
-                    <a href="/"><img src="/images/coalition/rt4.png"/></a>
-                    <a href="/"><img src="/images/coalition/stanfordpacs.svg"/></a>
+                    <a href="https://www.aclu-mn.org/"><img src="/images/coalition/aclu.svg"/></a>
+                    <a href="https://cairmn.com/"><img src="/images/coalition/cairmn.png"/></a>
+                    <a href="https://www.cuapb.org/"><img src="/images/coalition/cuapb.png"/></a>
+                    <a href="https://www.jewishcommunityaction.org/"><img src="/images/coalition/jewish-community-action.png"/></a>
+                    <a href="https://rt4.mn/"><img src="/images/coalition/rt4.png"/></a>
+                    <a href="https://pacscenter.stanford.edu/"><img src="/images/coalition/stanfordpacs.svg"/></a>
                 </div>
             </section>
         </article>
         <footer>
+            Code provided by <a href="https://www.obsessivefacts.com" target="_blank">Obsessive Network LLC</a>
+            <br>
             Hosting provided by <a href="https://capsul.org/" target="_blank">Capsul.org</a>
             <br>
             <a href="https://postme.mn/wp-login.php">Login</a>
@@ -201,10 +224,6 @@
                 <div class="info-table">
                      <table>
                         <tr>
-                            <th>Twitter:</th>
-                            <td><a href="https://twitter.com/${wardData[ward].twitter}" target="_blank">@${wardData[ward].twitter}</a></td>
-                        </tr>
-                        <tr>
                             <th>Email:</th>
                             <td><a href="mailto:${wardData[ward].email}">${wardData[ward].email}</a></td>
                         </tr>
@@ -212,8 +231,12 @@
                             <th>Phone:</th>
                             <td><a href="tel:${wardData[ward].phone}">${wardData[ward].phone}</a></td>
                         </tr>
+                        <tr>
+                            <th>Twitter:</th>
+                            <td><a href="https://twitter.com/${wardData[ward].twitter}" target="_blank">@${wardData[ward].twitter}</a></td>
+                        </tr>
                     </table>
-                    <img class="headshot" src="/images/wards/${wardData[ward].image}"/>
+                    <img class="headshot" src="/images/wards/${wardData[ward].image}" alt="${wardData[ward].name}" />
                 </div>
             `;
 
